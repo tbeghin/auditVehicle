@@ -1,0 +1,327 @@
+<div class="content">
+  <mat-card>
+    <mat-card-title>
+      Audit préventif véhicule
+    </mat-card-title>
+    <mat-card-content>
+      <form [formGroup]="options">
+        <div class="row">
+          <mat-form-field class="col-md-6">
+            <mat-label>Agence :</mat-label>
+            <input matInput placeholder="Méricourt">
+          </mat-form-field>
+
+          <mat-form-field class="col-md-6">
+            <mat-label>Sous secteur :</mat-label>
+            <input matInput placeholder="430">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col-md-6">
+            <mat-label>Site :</mat-label>
+            <input matInput placeholder="Arena Stade Couvert">
+          </mat-form-field>
+
+          <mat-form-field class="col-md-6">
+            <mat-label>Nom du conducteur :</mat-label>
+            <input matInput placeholder="Michel">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col-md-6">
+            <mat-label>Contrôle réalisé par :</mat-label>
+            <input matInput placeholder="Jacques">
+          </mat-form-field>
+
+          <mat-form-field class="col-md-6">
+            <input matInput [matDatepicker]="picker" placeholder="Date de l'audit">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col-md-6">
+            <mat-label>Kilométrage :</mat-label>
+            <input matInput type="number" placeholder="1000 km">
+          </mat-form-field>
+
+          <mat-form-field class="col-md-6">
+            <mat-label>Immatriculation :</mat-label>
+            <input matInput placeholder="AB-123-CD">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Propreté extérieure :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Etat carosserie :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Propreté intérieure/rangement :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Etat des pneumatiques :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Eclairage :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Retroviseurs :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Essuie-glaces :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Pare-brise :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Vignette d'assurance valide et en cours :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Constat pré-rempli (tampon IDEX) :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Logos :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Papiers du véhicule :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Carnet d'entretien :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Révision technique :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field class="col-md-4">
+            <mat-label>Kilométrage de la dernière révision :</mat-label>
+            <input matInput placeholder="1000km">
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col-md-6">
+            <input matInput [matDatepicker]="lastCtTheo" placeholder="Date du dernier C.T. théorique">
+            <mat-datepicker-toggle matSuffix [for]="lastCtTheo"></mat-datepicker-toggle>
+            <mat-datepicker #lastCtTheo></mat-datepicker>
+          </mat-form-field>
+          <mat-form-field class="col-md-6">
+            <input matInput [matDatepicker]="lastCtRea" placeholder="Date du dernier C.T. réalisé">
+            <mat-datepicker-toggle matSuffix [for]="lastCtRea"></mat-datepicker-toggle>
+            <mat-datepicker #lastCtRea></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Présence du sticker :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Permis de conduire :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Chargement du véhicle :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non satisfaisant</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Outillage du véhicule :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field class="col-md-4">
+            <input matInput [matDatepicker]="toolsDate" placeholder="Si NC, date de la levée de réserve">
+            <mat-datepicker-toggle matSuffix [for]="toolsDate"></mat-datepicker-toggle>
+            <mat-datepicker #toolsDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Présence roue de secours :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field class="col-md-4">
+            <input matInput [matDatepicker]="spareWheelDate" placeholder="Si NC, date de la levée de réserve">
+            <mat-datepicker-toggle matSuffix [for]="spareWheelDate"></mat-datepicker-toggle>
+            <mat-datepicker #spareWheelDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Présence du cric :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field class="col-md-4">
+            <input matInput [matDatepicker]="cricDate" placeholder="Si NC, date de la levée de réserve">
+            <mat-datepicker-toggle matSuffix [for]="cricDate"></mat-datepicker-toggle>
+            <mat-datepicker #cricDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Présence manivelle :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field class="col-md-4">
+            <input matInput [matDatepicker]="crankDate" placeholder="Si NC, date de la levée de réserve">
+            <mat-datepicker-toggle matSuffix [for]="crankDate"></mat-datepicker-toggle>
+            <mat-datepicker #crankDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Gilet et triangle de sécurité :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Conforme</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Non conforme</mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field class="col-md-4">
+            <input matInput [matDatepicker]="securityAccessoryDate" placeholder="Si NC, date de la levée de réserve">
+            <mat-datepicker-toggle matSuffix [for]="securityAccessoryDate"></mat-datepicker-toggle>
+            <mat-datepicker #securityAccessoryDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Extincteur vérifié annuellement :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" color="primary" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" color="primary" class="col-md-6">Véhicule non équipé</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <div class="row">
+          <label class="col-md-3">Trousse à pharmacie :</label>
+          <mat-radio-group class="col-md-5">
+            <mat-radio-button value="true" class="col-md-6">Satisfaisant</mat-radio-button>
+            <mat-radio-button value="false" class="col-md-6">Véhicule non équipé</mat-radio-button>
+          </mat-radio-group>
+          <textarea matInput class="col-md-4" placeholder="Commentaires :"></textarea>
+        </div>
+
+        <h4>Contrôle visuel du véhicule</h4>
+
+        <div class="row">
+          <mat-form-field class="col-md-12">
+            <mat-label>Chocs ou Rayures :</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field>
+        </div>
+
+        <div class="row">
+          <mat-form-field class="col-md-12">
+            <mat-label>Observations :</mat-label>
+            <textarea matInput placeholder=""></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

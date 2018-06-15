@@ -2,10 +2,48 @@ mat-card {
   margin: 10px;
 }
 
-mat-card mat-card-title {
-
+mat-accordion .mat-expansion-panel-header-title,
+mat-accordion .mat-expansion-panel-header-description {
+  flex-basis: 0;
 }
 
-mat-card mat-card-content {
+mat-accordion .mat-expansion-panel-header-description {
+  justify-content: space-between;
+  align-items: center;
+}
 
+.mat-expansion-panel-header-description, .mat-expansion-panel-header-title {
+  margin-right: 40px;
+}
+
+.green-icon {
+  color: green;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.green-icon svg {
+  fill: green;
+}
+
+.blue-icon {
+  color: blue;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.blue-icon svg {
+  fill: blue;
+}
+
+.orange-icon {
+  color: orange;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.orange-icon svg {
+  fill: orange;
+}
+
+.red-icon {
+  color: red;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.red-icon svg {
+  fill: red;
 }

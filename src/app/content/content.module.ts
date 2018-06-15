@@ -6,6 +6,7 @@ import {ContentRoutingModule} from './content-routing.module';
 import {RouterModule} from '@angular/router';
 import {DashboardModule} from '../dashboard/dashboard.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {AuditFormModule} from '../audit-form/audit-form.module';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MaterialModule,
     ReactiveFormsModule,
     ContentRoutingModule,
-    DashboardModule
+    DashboardModule,
+    AuditFormModule
   ],
   declarations: [ContentComponent],
   exports: [ContentComponent]

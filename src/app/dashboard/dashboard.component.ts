@@ -1,22 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent implements OnInit {
-  options: FormGroup;
-
-  constructor(fb: FormBuilder) {
-    this.options = fb.group({
-      hideRequired: true,
-      floatLabel: 'auto',
-    });
-  }
-
-  ngOnInit() {
-  }
-
+export class DashboardComponent {
 }

@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { MainHeaderComponent } from './main-header.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {MainHeaderComponent} from './main-header.component';
+import {MaterialModule} from '../material/material.module';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    MaterialModule
   ],
-  declarations: [MainHeaderComponent]
+  declarations: [MainHeaderComponent],
+  exports: [MainHeaderComponent]
 })
-export class MainHeaderModule { }
+export class MainHeaderModule {
+}

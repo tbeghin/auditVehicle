@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: '', component: ContentComponent, children: [
       {path: 'dashboard', component: DashboardComponent},
+      {path: 'newForm/:id', component: AuditFormComponent},
       {path: 'newForm', component: AuditFormComponent},
       {path: '', redirectTo: 'dashboard', pathMatch: 'full'}
     ]

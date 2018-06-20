@@ -7,6 +7,8 @@ import {RouterModule} from '@angular/router';
 import {DashboardModule} from '../dashboard/dashboard.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AuditFormModule} from '../audit-form/audit-form.module';
+import {MainSidebarModule} from '../main-sidebar/main-sidebar.module';
+import {MainHeaderModule} from '../main-header/main-header.module';
 
 @NgModule({
   imports: [
@@ -16,6 +18,8 @@ import {AuditFormModule} from '../audit-form/audit-form.module';
     MaterialModule,
     ReactiveFormsModule,
     ContentRoutingModule,
+    MainSidebarModule,
+    MainHeaderModule,
     DashboardModule,
     AuditFormModule
   ],

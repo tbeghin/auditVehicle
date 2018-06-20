@@ -1,72 +1,23 @@
 <div class="content">
   <mat-card>
     <mat-card-title>
-      Liste des véhicules
+      {{label.title}}
     </mat-card-title>
     <mat-card-content>
       <mat-accordion>
-        <mat-expansion-panel>
+        <mat-expansion-panel *ngFor="let vehicle of Vehicles">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              AB-123-CD
+              {{vehicle.immatriculation}}
             </mat-panel-title>
             <mat-panel-description>
-              12/10/2017
-              <mat-icon class="green-icon">check_circle</mat-icon>
+              {{vehicle.controlDate}}
+              <mat-icon ngClass="{{vehicle.statusControl.class}}">{{vehicle.statusControl.icon}}</mat-icon>
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>R.A.S.</p>
-
+          <p>{{vehicle.description}}</p>
           <mat-action-row>
-            <button mat-button color="primary">Voir</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              AB-456-CD
-            </mat-panel-title>
-            <mat-panel-description>
-              23/02/2015
-              <mat-icon class="red-icon">cancel</mat-icon>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>R.A.S.</p>
-
-          <mat-action-row>
-            <button mat-button color="primary">Voir</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              AB-159-CD
-            </mat-panel-title>
-            <mat-panel-description>
-              12/10/2017
-              <mat-icon class="blue-icon">info</mat-icon>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>R.A.S.</p>
-
-          <mat-action-row>
-            <button mat-button color="primary">Voir</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              AB-789-CD
-            </mat-panel-title>
-            <mat-panel-description>
-              12/10/2017
-              <mat-icon class="orange-icon">report_problem</mat-icon>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <p>R.A.S.</p>
-
-          <mat-action-row>
-            <button mat-button color="primary">Voir</button>
+            <button mat-button color="primary" (click)="viewVehicle(vehicle.id)">{{label.viewButton}}</button>
           </mat-action-row>
         </mat-expansion-panel>
       </mat-accordion>

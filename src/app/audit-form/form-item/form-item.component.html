@@ -1,0 +1,30 @@
+<mat-form-field class="col-12" *ngIf="item.type == 'input'" [formGroup]="itemForm">
+  <mat-label>{{item.label}}</mat-label>
+  <input [id]="item.id" [name]="item.name" matInput placeholder="{{item.placeholder}}" [formControlName]="item.formControlName">
+</mat-form-field>
+
+<mat-form-field class="col-12" *ngIf="item.type == 'number'" [formGroup]="itemForm">
+  <mat-label>{{item.label}}</mat-label>
+  <input [id]="item.id" [name]="item.name" matInput type="number" placeholder="{{item.placeholder}}" [formControlName]="item.formControlName">
+</mat-form-field>
+
+<div class="col-12" *ngIf="item.type == 'radio'" [formGroup]="itemForm">
+  <label [for]="item.id" class="col-6">{{item.label}}</label>
+  <mat-radio-group [id]="item.id" [name]="item.name" [formControlName]="item.formControlName" *ngIf="item.type == 'radio'">
+    <mat-radio-button value="{{button.value}}" color="primary" class="col-3" *ngFor="let button of item.button">
+      {{button.label}}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>
+
+<mat-form-field class="col-12" *ngIf="item.type == 'textarea'" [formGroup]="itemForm">
+  <mat-label>{{item.label}}</mat-label>
+  <textarea matInput [id]="item.id" [name]="item.name" placeholder="" [formControlName]="item.formControlName"></textarea>
+</mat-form-field>
+
+<mat-form-field class="col-12" *ngIf="item.type == 'date'" [formGroup]="itemForm">
+  <input [id]="item.id" [name]="item.name" matInput [matDatepicker]="picker" placeholder="{{item.placeholder}}"
+         [formControlName]="item.formControlName">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>

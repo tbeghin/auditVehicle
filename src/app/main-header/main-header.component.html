@@ -8,4 +8,17 @@
     <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
   </button>
   <span>Audit de véhicule</span>
+  <button
+    class="btn btn-primary btn-margin"
+    *ngIf="!auth.isAuthenticated()"
+    (click)="auth.login()">
+    Log In
+  </button>
+
+  <button
+    class="btn btn-primary btn-margin"
+    *ngIf="auth.isAuthenticated()"
+    (click)="auth.logout()">
+    Log Out
+  </button>
 </mat-toolbar>

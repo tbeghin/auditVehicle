@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {AuthenticationService} from '../services/authentication.service';
 
 @Component({
   selector: 'app-main-header',
@@ -8,4 +9,9 @@ import {Component, Input} from '@angular/core';
 export class MainHeaderComponent {
   @Input() sidenav;
   @Input() isHandset$;
+  auth: AuthenticationService;
+
+  constructor(private authenticationService: AuthenticationService) {
+    this.auth = authenticationService;
+  }
 }

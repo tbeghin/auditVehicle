@@ -1,9 +1,11 @@
 export const Label: DashboardLabel = {
   title: 'Liste des véhicules',
-  viewButton: 'Voir'
+  newAudit: 'Nouvel audit',
+  editAudit: 'Editer'
 };
 
 export class DashboardLabel {
   title: string;
-  viewButton: string;
+  newAudit: string;
+  editAudit: string;
 }

@@ -1,6 +1,8 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
-import {CompositionForm} from '../audit-form.composition-form';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import {CompositionForm} from '../../models/constants/audit-form.composition-form';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {Audit} from '../../models/audit';
+import {BehaviorSubject} from 'rxjs/index';
 
 @Component({
   selector: 'app-form-item',
@@ -9,17 +11,27 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class FormItemComponent implements OnInit {
   @Input() item: CompositionForm;
-  @Output() formReady: EventEmitter<FormGroup>;
+  @Input() vehicle: BehaviorSubject<Audit>;
+  @Output() formReady: EventEmitter<FormControl>;
   itemForm: FormGroup;
+  itemControl: FormControl;
 
   constructor(private formBuilder: FormBuilder) {
-    this.formReady = new EventEmitter<FormGroup>();
     this.itemForm = new FormGroup({});
+    this.formReady = new EventEmitter<FormControl>();
+    this.itemControl = this.formBuilder.control('');
   }
 
   ngOnInit() {
-    this.itemForm.addControl(this.item.formControlName, this.formBuilder.control(''));
-    this.formReady.emit(this.itemForm);
+    const pathVehicle = this.item.pathValue.split('.');
+    this.vehicle.subscribe(vehicle => {
+      if (vehicle._id) {
+        pathVehicle.forEach(path => vehicle = vehicle[path]);
+        this.itemControl.setValue(vehicle);
+      }
+    });
+    this.itemForm.addControl(this.item.formControlName, this.itemControl);
+    this.formReady.emit(this.itemControl);
   }
 
 }

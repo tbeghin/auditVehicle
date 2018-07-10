@@ -8,7 +8,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'agency',
         placeholder: 'Méricourt',
-        formControlName: 'formInputAgency'
+        formControlName: 'formInputAgency',
+        pathValue: 'agency'
       },
       {
         id: 'sub-agency',
@@ -17,7 +18,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'sub-agency',
         placeholder: '430',
-        formControlName: 'formInputSubAgency'
+        formControlName: 'formInputSubAgency',
+        pathValue: 'subAgency'
       }
     ]
   },
@@ -30,7 +32,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'site',
         placeholder: 'Arena Stade Couvert',
-        formControlName: 'formInputSite'
+        formControlName: 'formInputSite',
+        pathValue: 'site'
       },
       {
         id: 'driver',
@@ -39,7 +42,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'agency',
         placeholder: 'Michel',
-        formControlName: 'formInputDriver'
+        formControlName: 'formInputDriver',
+        pathValue: 'driver'
       }
     ]
   },
@@ -52,7 +56,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'controler',
         placeholder: 'Jacques',
-        formControlName: 'formInputControler'
+        formControlName: 'formInputControler',
+        pathValue: 'inspector'
       },
       {
         id: 'auditDate',
@@ -61,7 +66,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'auditDate',
         placeholder: 'Date de l\'audit',
-        formControlName: 'formInputAuditDate'
+        formControlName: 'formInputAuditDate',
+        pathValue: 'auditDate'
       }
     ]
   },
@@ -74,7 +80,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'distance',
         placeholder: '1000',
-        formControlName: 'formInputDistance'
+        formControlName: 'formInputDistance',
+        pathValue: 'distance'
       },
       {
         id: 'plateNumber',
@@ -83,7 +90,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'plateNumber',
         placeholder: 'Immatriculation',
-        formControlName: 'formInputPlateNumber'
+        formControlName: 'formInputPlateNumber',
+        pathValue: 'plateNumber'
       }
     ]
   },
@@ -106,7 +114,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'cleanliness',
         placeholder: '',
-        formControlName: 'formRadioCleanliness'
+        formControlName: 'formRadioCleanliness',
+        pathValue: 'cleanliness.value'
       },
       {
         id: 'cleanlinessComment',
@@ -115,7 +124,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'cleanlinessComment',
         placeholder: '',
-        formControlName: 'formInputCleanliness'
+        formControlName: 'formInputCleanliness',
+        pathValue: 'cleanliness.comment'
       }
     ]
   },
@@ -138,7 +148,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'bodyState',
         placeholder: '',
-        formControlName: 'formRadioBodyState'
+        formControlName: 'formRadioBodyState',
+        pathValue: 'bodyState.value'
       },
       {
         id: 'bodyStateComment',
@@ -147,7 +158,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'bodyStateComment',
         placeholder: '',
-        formControlName: 'formInputBodyState'
+        formControlName: 'formInputBodyState',
+        pathValue: 'bodyState.comment'
       }
     ]
   },
@@ -170,7 +182,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'arrangement',
         placeholder: '',
-        formControlName: 'formRadioArrangement'
+        formControlName: 'formRadioArrangement',
+        pathValue: 'arrangement.value'
       },
       {
         id: 'arrangementComment',
@@ -179,7 +192,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'arrangementComment',
         placeholder: '',
-        formControlName: 'formInputArrangement'
+        formControlName: 'formInputArrangement',
+        pathValue: 'arrangement.comment'
       }
     ]
   },
@@ -202,7 +216,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'pneumaticState',
         placeholder: '',
-        formControlName: 'formRadioPneumaticState'
+        formControlName: 'formRadioPneumaticState',
+        pathValue: 'pneumaticState.value'
       },
       {
         id: 'pneumaticStateComment',
@@ -211,7 +226,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'pneumaticStateComment',
         placeholder: '',
-        formControlName: 'formInputPneumaticState'
+        formControlName: 'formInputPneumaticState',
+        pathValue: 'pneumaticState.comment'
       }
     ]
   },
@@ -234,7 +250,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'lighting',
         placeholder: '',
-        formControlName: 'formRadioLighting'
+        formControlName: 'formRadioLighting',
+        pathValue: 'lighting.value'
       },
       {
         id: 'lightingComment',
@@ -243,7 +260,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'lightingComment',
         placeholder: '',
-        formControlName: 'formInputLighting'
+        formControlName: 'formInputLighting',
+        pathValue: 'lighting.comment'
       }
     ]
   },
@@ -266,7 +284,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'wingMirror',
         placeholder: '',
-        formControlName: 'formRadioWingMirror'
+        formControlName: 'formRadioWingMirror',
+        pathValue: 'wingMirror.value'
       },
       {
         id: 'wingMirrorComment',
@@ -275,7 +294,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'wingMirrorComment',
         placeholder: '',
-        formControlName: 'formInputWingMirror'
+        formControlName: 'formInputWingMirror',
+        pathValue: 'wingMirror.comment'
       }
     ]
   },
@@ -298,7 +318,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'windscreenWipers',
         placeholder: '',
-        formControlName: 'formRadioWindscreenWipers'
+        formControlName: 'formRadioWindscreenWipers',
+        pathValue: 'windscreenWipers.value'
       },
       {
         id: 'windscreenWipersComment',
@@ -307,7 +328,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'windscreenWipersComment',
         placeholder: '',
-        formControlName: 'formInputWindscreenWipers'
+        formControlName: 'formInputWindscreenWipers',
+        pathValue: 'windscreenWipers.comment'
       }
     ]
   },
@@ -330,7 +352,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'windshield',
         placeholder: '',
-        formControlName: 'formRadioWindshield'
+        formControlName: 'formRadioWindshield',
+        pathValue: 'windshield.value'
       },
       {
         id: 'windshieldComment',
@@ -339,7 +362,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'windshieldComment',
         placeholder: '',
-        formControlName: 'formInputWindshield'
+        formControlName: 'formInputWindshield',
+        pathValue: 'windshield.comment'
       }
     ]
   },
@@ -362,7 +386,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'insurance',
         placeholder: '',
-        formControlName: 'formRadioInsurance'
+        formControlName: 'formRadioInsurance',
+        pathValue: 'insurance.value'
       },
       {
         id: 'insuranceComment',
@@ -371,7 +396,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'insuranceComment',
         placeholder: '',
-        formControlName: 'formInputInsurance'
+        formControlName: 'formInputInsurance',
+        pathValue: 'insurance.comment'
       }
     ]
   },
@@ -394,7 +420,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'report',
         placeholder: '',
-        formControlName: 'formRadioReport'
+        formControlName: 'formRadioReport',
+        pathValue: 'report.value'
       },
       {
         id: 'reportComment',
@@ -403,7 +430,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'reportComment',
         placeholder: '',
-        formControlName: 'formInputReport'
+        formControlName: 'formInputReport',
+        pathValue: 'report.comment'
       }
     ]
   },
@@ -426,7 +454,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'logo',
         placeholder: '',
-        formControlName: 'formRadioLogo'
+        formControlName: 'formRadioLogo',
+        pathValue: 'logo.value'
       },
       {
         id: 'logoComment',
@@ -435,7 +464,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'logoComment',
         placeholder: '',
-        formControlName: 'formInputLogo'
+        formControlName: 'formInputLogo',
+        pathValue: 'logo.comment'
       }
     ]
   },
@@ -458,7 +488,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'vehiclePapers',
         placeholder: '',
-        formControlName: 'formRadioVehiclePapers'
+        formControlName: 'formRadioVehiclePapers',
+        pathValue: 'vehiclePapers.value'
       },
       {
         id: 'vehiclePapersComment',
@@ -467,7 +498,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'vehiclePapersComment',
         placeholder: '',
-        formControlName: 'formInputVehiclePapers'
+        formControlName: 'formInputVehiclePapers',
+        pathValue: 'vehiclePapers.comment'
       }
     ]
   },
@@ -490,7 +522,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'vehicleBook',
         placeholder: '',
-        formControlName: 'formRadioVehicleBook'
+        formControlName: 'formRadioVehicleBook',
+        pathValue: 'vehicleBook.value'
       },
       {
         id: 'vehicleBookComment',
@@ -499,7 +532,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'vehicleBookComment',
         placeholder: '',
-        formControlName: 'formInputVehicleBook'
+        formControlName: 'formInputVehicleBook',
+        pathValue: 'vehicleBook.comment'
       }
     ]
   },
@@ -522,7 +556,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'technicalRevision',
         placeholder: '',
-        formControlName: 'formRadioTechnicalRevision'
+        formControlName: 'formRadioTechnicalRevision',
+        pathValue: 'technicalRevision.value'
       },
       {
         id: 'technicalRevisionComment',
@@ -531,7 +566,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'technicalRevisionComment',
         placeholder: '1000',
-        formControlName: 'formInputTechnicalRevision'
+        formControlName: 'formInputTechnicalRevision',
+        pathValue: 'technicalRevision.comment'
       }
     ]
   },
@@ -544,7 +580,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'lastCtTheo',
         placeholder: 'Date du dernier C.T. théorique',
-        formControlName: 'formDateLastCtTheo'
+        formControlName: 'formDateLastCtTheo',
+        pathValue: 'lastCtTheoDate'
       },
       {
         id: 'lastCtRea',
@@ -553,7 +590,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-6',
         name: 'lastCtRea',
         placeholder: 'Date du dernier C.T. réalisé',
-        formControlName: 'formDateLastCtRea'
+        formControlName: 'formDateLastCtRea',
+        pathValue: 'lastCtReaDate'
       }
     ]
   },
@@ -576,7 +614,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'sticker',
         placeholder: '',
-        formControlName: 'formRadioSticker'
+        formControlName: 'formRadioSticker',
+        pathValue: 'sticker.value'
       },
       {
         id: 'stickerComment',
@@ -585,7 +624,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'stickerComment',
         placeholder: '',
-        formControlName: 'formInputSticker'
+        formControlName: 'formInputSticker',
+        pathValue: 'sticker.comment'
       }
     ]
   },
@@ -608,7 +648,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'license',
         placeholder: '',
-        formControlName: 'formRadioLicense'
+        formControlName: 'formRadioLicense',
+        pathValue: 'license.value'
       },
       {
         id: 'licenseComment',
@@ -617,7 +658,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'licenseComment',
         placeholder: '',
-        formControlName: 'formInputLicense'
+        formControlName: 'formInputLicense',
+        pathValue: 'license.comment'
       }
     ]
   },
@@ -640,7 +682,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'loadingVehicle',
         placeholder: '',
-        formControlName: 'formRadioLoadingVehicle'
+        formControlName: 'formRadioLoadingVehicle',
+        pathValue: 'loadingVehicle.value'
       },
       {
         id: 'loadingComment',
@@ -649,7 +692,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'loadingComment',
         placeholder: '',
-        formControlName: 'formInputLoading'
+        formControlName: 'formInputLoading',
+        pathValue: 'loadingVehicle.comment'
       }
     ]
   },
@@ -672,7 +716,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'tools',
         placeholder: '',
-        formControlName: 'formRadioTools'
+        formControlName: 'formRadioTools',
+        pathValue: 'tools.value'
       },
       {
         id: 'toolsDate',
@@ -681,7 +726,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'toolsDate',
         placeholder: 'Si NC, date de la levée de réserve',
-        formControlName: 'formDateToolsDate'
+        formControlName: 'formDateToolsDate',
+        pathValue: 'tools.date'
       }
     ]
   },
@@ -704,7 +750,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'spareWheel',
         placeholder: '',
-        formControlName: 'formRadioSpareWheel'
+        formControlName: 'formRadioSpareWheel',
+        pathValue: 'spareWheel.value'
       },
       {
         id: 'spareWheelDate',
@@ -713,7 +760,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'spareWheelDate',
         placeholder: 'Si NC, date de la levée de réserve',
-        formControlName: 'formDateSpareWheelDate'
+        formControlName: 'formDateSpareWheelDate',
+        pathValue: 'spareWheel.date'
       }
     ]
   },
@@ -736,7 +784,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'cric',
         placeholder: '',
-        formControlName: 'formRadioCric'
+        formControlName: 'formRadioCric',
+        pathValue: 'cric.value'
       },
       {
         id: 'cricDate',
@@ -745,7 +794,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'cricDate',
         placeholder: 'Si NC, date de la levée de réserve',
-        formControlName: 'formDateCricDate'
+        formControlName: 'formDateCricDate',
+        pathValue: 'cric.date'
       }
     ]
   },
@@ -768,7 +818,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'crank',
         placeholder: '',
-        formControlName: 'formRadioCrank'
+        formControlName: 'formRadioCrank',
+        pathValue: 'crank.value'
       },
       {
         id: 'crankDate',
@@ -777,7 +828,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'crankDate',
         placeholder: 'Si NC, date de la levée de réserve',
-        formControlName: 'formDateCrankDate'
+        formControlName: 'formDateCrankDate',
+        pathValue: 'crank.date'
       }
     ]
   },
@@ -800,7 +852,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'securityAccessory',
         placeholder: '',
-        formControlName: 'formRadioSecurityAccessory'
+        formControlName: 'formRadioSecurityAccessory',
+        pathValue: 'securityAccessory.value'
       },
       {
         id: 'securityAccessoryDate',
@@ -809,7 +862,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'securityAccessoryDate',
         placeholder: 'Si NC, date de la levée de réserve',
-        formControlName: 'formDateSecurityAccessoryDate'
+        formControlName: 'formDateSecurityAccessoryDate',
+        pathValue: 'securityAccessory.date'
       }
     ]
   },
@@ -832,7 +886,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'extinguisher',
         placeholder: '',
-        formControlName: 'formRadioExtinguisher'
+        formControlName: 'formRadioExtinguisher',
+        pathValue: 'extinguisher.value'
       },
       {
         id: 'extinguisherComment',
@@ -841,7 +896,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'extinguisherComment',
         placeholder: '',
-        formControlName: 'formInputExtinguisher'
+        formControlName: 'formInputExtinguisher',
+        pathValue: 'extinguisher.comment'
       }
     ]
   },
@@ -864,7 +920,8 @@ export const AuditComposition: CompositionFormRow[] = [
         ],
         name: 'aidKit',
         placeholder: '',
-        formControlName: 'formRadioAidKit'
+        formControlName: 'formRadioAidKit',
+        pathValue: 'aidKit.value'
       },
       {
         id: 'aidKitComment',
@@ -873,7 +930,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-4',
         name: 'aidKitComment',
         placeholder: '',
-        formControlName: 'formInputAidKit'
+        formControlName: 'formInputAidKit',
+        pathValue: 'aidKit.comment'
       }
     ]
   },
@@ -886,7 +944,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-12',
         name: 'shocksOrStripes',
         placeholder: '',
-        formControlName: 'formInputshocksOrStripes'
+        formControlName: 'formInputshocksOrStripes',
+        pathValue: 'shocksOrStripes'
       }
     ]
   },
@@ -899,7 +958,8 @@ export const AuditComposition: CompositionFormRow[] = [
         class: 'col-12',
         name: 'observations',
         placeholder: '',
-        formControlName: 'formInputObservations'
+        formControlName: 'formInputObservations',
+        pathValue: 'observations'
       }
     ]
   }
@@ -918,6 +978,7 @@ export class CompositionForm {
   placeholder: string;
   formControlName: string;
   button?: RadioButton[];
+  pathValue: string;
 }
 
 export class RadioButton {

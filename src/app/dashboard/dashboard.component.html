@@ -4,20 +4,27 @@
       {{label.title}}
     </mat-card-title>
     <mat-card-content>
-      <mat-accordion>
-        <mat-expansion-panel *ngFor="let vehicle of Vehicles">
+      <mat-accordion *ngIf="vehicles">
+        <mat-expansion-panel *ngFor="let vehicle of vehicles">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              {{vehicle.immatriculation}}
+              {{vehicle.plateNumber}}
             </mat-panel-title>
             <mat-panel-description>
-              {{vehicle.controlDate}}
+              {{vehicle.dateLastAudit | date}}
               <mat-icon ngClass="{{vehicle.statusControl.class}}">{{vehicle.statusControl.icon}}</mat-icon>
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <p>{{vehicle.description}}</p>
+          <mat-list>
+            <mat-list-item *ngFor="let audit of vehicle.historyAudit" style="justify-content: space-between">
+              {{audit.auditDate | date}}
+              <button mat-icon-button (click)="viewVehicle(vehicle._id)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </mat-list-item>
+          </mat-list>
           <mat-action-row>
-            <button mat-button color="primary" (click)="viewVehicle(vehicle.id)">{{label.viewButton}}</button>
+            <button mat-button color="primary" (click)="viewVehicle()">{{label.newAudit}}</button>
           </mat-action-row>
         </mat-expansion-panel>
       </mat-accordion>

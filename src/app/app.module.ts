@@ -9,6 +9,7 @@ import {ErrorPageComponent} from './error-page/error-page.component';
 import {ContentModule} from './content/content.module';
 import {registerLocaleData} from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import {HttpClientModule} from '@angular/common/http';
 
 registerLocaleData(localeFr, 'fr');
 
@@ -19,6 +20,7 @@ registerLocaleData(localeFr, 'fr');
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     LayoutModule,
     ContentModule,
